@@ -6,13 +6,23 @@ import (
 	"fmt"
 )
 
+// Celsius ...
 type Celsius float64
+
+// Fahrenheit ...
 type Fahrenheit float64
+
+// Kelvin ...
 type Kelvin float64
 
+// CToF ...
 func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9.0/5.0 + 32.0) }
+
+// FToC ...
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32.0) * 5.0 / 9.0) }
-func KToC(k Kelvin) Celsius     { return Celsius(k - 273.15) }
+
+// KToC ...
+func KToC(k Kelvin) Celsius { return Celsius(k - 273.15) }
 
 func (c Celsius) String() string { return fmt.Sprintf("%g°C", c) }
 
